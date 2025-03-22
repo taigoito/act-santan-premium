@@ -141,6 +141,7 @@ button, input, select, textarea {
   margin-right: auto;
   padding-left: clamp(0.75rem, 2%, 1rem);
   padding-right: clamp(0.75rem, 2%, 1rem);
+  padding-right: 6rem;
 }
 .header__siteBrand {
   width: min(36vw, 12rem);
