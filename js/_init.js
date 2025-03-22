@@ -4,9 +4,24 @@
  * Location: Fukui, Japan
  */
 
+import DrawerMenu from './_drawerMenu.js';
+import EvilIcons from './_evilIcons.js';
 import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.esm-browser.js';
 
 export default function init(catArr) {
+  // DrawerMenu
+  const siteBrand = document.querySelector('.header__siteBrand');
+  const primaryMenu = document.querySelector('.gNav__menu');
+  new DrawerMenu({
+    darkMode: true,
+    siteBrand: siteBrand,
+    primaryMenu: primaryMenu
+  });
+
+  // Evil Icons
+  new EvilIcons();
+
+  // Product
   const data = {
     data() {
       return {
