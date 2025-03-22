@@ -33,3 +33,10 @@ $fontWeightBase:       400;
 $headingFontFamily:    "Cormorant Garamond", "Shippori Mincho", serif;
 $headingLetterSpacing: 0.2em;
 $linkHoverDecoration:  none;
+
+$drawerBreakpoint:       675px;
+$drawerPad:              0;
+$drawerNaviconDarkBg:    #ffffff;
+$drawerNaviconDarkColor: map-get($themeColors, "darker");
+$drawerCloseDarkBg:      #ffffff;
+$drawerCloseDarkColor:   map-get($themeColors, "primary");
