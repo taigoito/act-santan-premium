@@ -1,0 +1,22 @@
+/**
+ * Main
+ */
+
+.main {
+  &__header {
+    @include container();
+    padding-top: 12rem;
+    padding-bottom: space(4);
+    text-align: center;
+  }
+
+  &__title {
+    margin: space(3) 0;
+  }
+
+  &__description {
+    margin: space() 0;
+    font-size: map-get($fontSizes, "sm");
+    line-height: 2;
+  }
+}
