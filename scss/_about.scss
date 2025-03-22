@@ -1,0 +1,73 @@
+/**
+ * About
+ */
+
+.about {
+  position: relative;
+  padding: space(4) 0;
+
+  &__container {
+    @include row();
+    @include container();
+
+    @media (min-width: breakpoint("sm")) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0 100%;
+    width: 100%;
+
+    @media (min-width: breakpoint("sm")) {
+      justify-content: flex-end;
+      flex-basis: auto;
+      width: fit-content;
+    }
+  }
+
+  &__heading {
+    flex: 0 0 100%;
+    order: 1;
+    width: 100%;
+    margin: space() auto;
+    color: themeColor("primary");
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: breakpoint("sm")) {
+      writing-mode: vertical-rl;
+      flex-basis: auto;
+      width: fit-content;
+      margin: space();
+      text-align: left;
+    }
+  }
+
+  &__lead {
+    writing-mode: vertical-rl;
+    flex: 0 0 auto;
+    order: 0;
+    width: fit-content;
+    margin: space() auto;
+    font-size: 1.5rem;
+    letter-spacing: $headingLetterSpacing;
+
+    @media (min-width: breakpoint("sm")) {
+      margin: space();
+    }
+  }
+
+  &__content {
+    flex: 0 0 auto;
+    width: fit-content;
+    margin: space() auto;
+
+    @media (min-width: breakpoint("sm")) {
+      margin: space();
+    }
+  }
+}

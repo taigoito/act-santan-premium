@@ -1,0 +1,89 @@
+/**
+ * Recommend
+ */
+
+.recommend {
+  position: relative;
+  padding: space(4) 0 0;
+  background-color: themeColor("primaryLight");
+
+  @media (min-width: breakpoint("sm")) {
+    padding: space(5) 0 space(4);
+  }
+
+  &__container {
+    @include row(space-around, flex-start);
+    @include container();
+
+    @media (min-width: breakpoint("sm")) {
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0 100%;
+    width: 100%;
+    padding-bottom: space(3);
+
+    @media (min-width: breakpoint("sm")) {
+      flex-basis: auto;
+      width: fit-content;
+    }
+  }
+
+  &__heading {
+    flex: 0 0 100%;
+    order: 1;
+    width: 100%;
+    margin: 0 auto;
+    color: themeColor("primary");
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: breakpoint("sm")) {
+      writing-mode: vertical-rl;
+      flex-basis: auto;
+      width: fit-content;
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &__lead {
+    flex: 0 0 100%;
+    order: 0;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: $headingLetterSpacing;
+
+    @media (min-width: breakpoint("sm")) {
+      writing-mode: vertical-rl;
+      flex-basis: auto;
+      width: fit-content;
+      margin: 0;
+      text-align: left;
+    }
+  }
+
+  &__list {
+    @include listUnstyled();
+    @include row(flex-start, flex-start);
+    margin: 0;
+  }
+
+  &__item {
+    @include col(4);
+    margin: 0 0 space(4);
+
+    h4 {
+      font-family: $fontFamilyBase;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+  }
+}

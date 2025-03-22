@@ -1,0 +1,103 @@
+/**
+ * Main Visual
+ */
+
+.mainVisual {
+  position: relative;
+  width: 100%;
+  height: 180vw;
+  overflow: hidden;
+
+  @media (min-width: breakpoint("sm")) {
+    height: min(80vw, 48rem); // Aspect ratio = 5 : 4, Max width = 60rem
+  }
+
+  // SiteBrand
+  // Mobile: width: 36vw, height: 30vw
+  // Desktop: width: 12rem, height: 10rem
+
+  &__title {
+    position: absolute;
+    top: 100vw;
+    left: 0;
+    right: 0;
+    bottom: 40vw;
+    z-index: 900;
+    width: 84vw;
+    height: 21vw; // Aspect ratio = 4 : 1
+    margin: auto;
+
+    @media (min-width: breakpoint("sm")) {
+      top: 9rem; // Header height
+      left: auto;
+      right: calc(50% - 6rem);
+      bottom: 9rem;
+      width: min(60vw, 36rem);
+      height: min(15vw, 9rem); // Aspect ratio = 4 : 1
+    }
+  }
+
+  &__image {
+    position: absolute;
+    margin: auto;
+
+    &--00 {
+      top: 61.5vw;
+      left: 0;
+      right: auto;
+      //bottom: 80vw;
+      width: 42vw; // SiteBrand + padding
+      height: 38.5vw; // Aspect ratio = 12 : 11
+
+      @media (min-width: breakpoint("sm")) {
+        top: 0;
+        left: auto;
+        right: calc(50% + 0.75rem);
+        //bottom: auto;
+        width: min(24vw, 14.4rem);
+        height: min(22vw, 13.2rem); // Aspect ratio = 12 : 11
+      }
+    }
+
+    &--01 {
+      //top: 140vw;
+      left: 0;
+      right: auto;
+      bottom: 0;
+      width: 80vw;
+      height: 40vw; // Aspect ratio = 2 : 1
+
+      @media (min-width: breakpoint("sm")) {
+        //top: auto;
+        left: auto;
+        right: calc(50% + min(24vw, 14.4rem) / 2 + 0.75rem);
+        width: min(48vw, 28.8rem);
+        height: min(27vw, 16rem); // Aspect ratio = 9 : 5
+      }
+    }
+
+    &--02 {
+      top: 20vw;
+      left: auto;
+      right: 0;
+      bottom: 90vw;
+      width: 50vw;
+      height: 70vw; // Aspect ratio = 5 : 7
+
+      @media (min-width: breakpoint("sm")) {
+        top: 9rem; // Header height
+        left: calc(50% + 0.75rem);
+        right: auto;
+        bottom: 0;
+        width: min(44vw, 26.4rem);
+        height: min(48vw, 28.8rem); // Aspect ratio = 11 : 12
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

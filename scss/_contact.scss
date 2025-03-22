@@ -1,0 +1,57 @@
+/**
+ * Contact
+ */
+
+.contact {
+  @include background("lighter");
+  padding: space(4) 0 space(5);
+
+  &__container {
+    @include container();
+  }
+
+  &__heading {
+    padding: 0 space();
+    font-size: map-get($fontSizes, "nr");
+  }
+
+  &__row {
+    @include row();
+  }
+
+  &__col {
+    @include col(3, true);
+    margin-bottom: space();
+  }
+
+  &__colInner {
+    @include row();
+    padding: space(3);
+    border-radius: space();
+    @include background("lightest");
+  }
+
+  &__subHeading {
+    flex: 0 0 auto;
+    width: fit-content;
+    margin: 0;
+    font-family: $fontFamilyBase;
+    font-weight: 700;
+    font-size: map-get($fontSizes, "xs");
+  }
+
+  &__content {
+    flex: 0 0 auto;
+    width: fit-content;
+  }
+
+  &__number {
+    margin: 0;
+    font-size: map-get($fontSizes, "xxl");
+  }
+
+  &__note {
+    margin: 0;
+    font-size: map-get($fontSizes, "xs");
+  }
+}

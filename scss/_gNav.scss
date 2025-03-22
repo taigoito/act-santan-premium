@@ -1,0 +1,22 @@
+/**
+ * G Nav
+ */
+
+.gNav {
+  writing-mode: vertical-rl;
+
+  &__menu {
+    list-style: none;
+    padding-top: space(3);
+
+    @media (max-width: breakpoint("sm") - 0.1) {
+      display: none;
+    }
+  }
+
+  &__menuItem {
+    margin: 0 space(3);
+    line-height: 2;
+    letter-spacing: $headingLetterSpacing;
+  }
+}

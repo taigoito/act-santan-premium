@@ -1,0 +1,18 @@
+/**
+ * Header
+ */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 990;
+  display: flex;
+  justify-content: space-between;
+  @include container();
+
+  &__siteBrand {
+    width: min(36vw, 12rem); // height: 30vw, 10rem
+  }
+}

@@ -1,0 +1,68 @@
+/**
+ * Footer
+ */
+
+.footer {
+  @include background("darkest");
+  padding: space(4) 0;
+
+  &__container {
+    @include row(center, flex-start);
+    @include container();
+
+    @media (min-width: breakpoint("sm")) {
+      justify-content: space-between;
+    }
+  }
+
+  &__siteBrand {
+    flex: 0 0 12rem;
+    width: min(36vw, 12rem); // height: 30vw, 10rem
+    margin: space(3) 0;
+  }
+
+  &__content {
+    flex: 0 0 auto;
+    width: 24rem;
+    margin: 0;
+  }
+
+  &__menu {
+    @include listUnstyled();
+    text-align: center;
+
+    @media (min-width: breakpoint("sm")) {
+      writing-mode: vertical-rl;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: space(4);
+      padding-top: space(3);
+      text-align: left;
+    }
+  }
+
+  &__menuItem {
+    margin: 0;
+    line-height: 2;
+    letter-spacing: $headingLetterSpacing;
+
+    @media (min-width: breakpoint("sm")) {
+      margin: 0 space(3);
+
+      &:first-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__copyright {
+    display: block;
+    margin: space(3) 0;
+    font-size: map-get($fontSizes, "xs");
+    text-align: center;
+
+    @media (min-width: breakpoint("sm")) {
+      text-align: right;
+    }
+  }
+}

@@ -80,6 +80,7 @@ $containerPad:   (
 }
 
 @mixin container($key: "lg", $maxWidth: map-get($containerWidths, $key)) {
+  width: 100%;
   max-width: $maxWidth;
   @include makeContainer($key);
 }
@@ -118,5 +119,6 @@ $containerPad:   (
       flex-basis: $size * $gridBase;
     }
   }
+  width: 100%;
   @include makeContainer("sm");
 }

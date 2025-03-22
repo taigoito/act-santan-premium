@@ -1,4 +1,35 @@
-// Variables
+// Variables#9d1f50
 
-$fontFamilyBase:       "Cormorant Garamond", "Shippori Mincho", serif;
-$headingFontFamily:    $fontFamilyBase;
+$themeColors:    (
+  darkest:         #262626, // 15%
+  darker:          #4d4d4d, // 30%
+  dark:            #808080, // 50%
+  light:           #b3b3b3, // 70%
+  lighter:         #d9d9d9, // 85%
+  lightest:        #ffffff, // 100%
+  primary:         #9e1f50, // hsl(337, 67%, 37%)
+  primaryLight:    #eedde4  // hsl(337, 35%, 90%)
+);
+$bodyBg:         #f7f7f7;
+
+$fontSizeBase:   18px;
+$rootFontSize:   min(4vw, $fontSizeBase);
+$gridBase:       6rem;
+$breakpoints:    (
+  sm:              675px,
+  lg:              1008px
+);
+$containerWidths:(
+  sm:              37.5rem, // 内寸 648px
+  lg:              56rem    // 内寸 972px
+);
+$containerPad:   (
+  sm:              0.75rem,
+  lg:              clamp(0.75rem, 2%, 1rem)
+);
+
+$fontFamilyBase:       "Shippori Mincho", serif;
+$fontWeightBase:       400;
+$headingFontFamily:    "Cormorant Garamond", "Shippori Mincho", serif;
+$headingLetterSpacing: 0.2em;
+$linkHoverDecoration:  none;

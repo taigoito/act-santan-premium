@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starter Template</title>
+    <title>三丹プレミアム</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Shippori+Mincho&display=swap" rel="stylesheet">
@@ -11,8 +11,140 @@
     <link rel="icon" href="./favicon.ico">
   </head>
   <body>
-    
+    <header class="header">
+      <h1 class="header__siteBrand">
+        <img src="./assets/logo_santan-premium.png">
+      </h1>
+      <nav class="gNav">
+        <ul class="gNav__menu">
+          <li class="gNav__menuItem"><a href="#">おすすめ</a></li>
+          <li class="gNav__menuItem"><a href="#">種類から選ぶ</a></li>
+          <li class="gNav__menuItem"><a href="#">商品一覧</a></li>
+          <li class="gNav__menuItem"><a href="#">お問合せ</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <header class="mainVisual">
+        <h2 class="mainVisual__title">
+          <img src="./assets/title_santan-premium.png">
+        </h2>
+        <figure class="mainVisual__image mainVisual__image--00">
+          <img src="./assets/mainImage00.jpg">
+        </figure>
+        <figure class="mainVisual__image mainVisual__image--01">
+          <img src="./assets/mainImage01.jpg">
+        </figure>
+        <figure class="mainVisual__image mainVisual__image--02">
+          <img src="./assets/mainImage02.jpg">
+        </figure>
+      </header>
+      <section class="about">
+        <div class="about__container">
+          <header class="about__header">
+            <h2 class="about__heading">about</h2>
+            <p class="about__lead">三丹<br>プレミアムの<br>こだわり</p>
+          </header>
+          <div class="about__content">
+            <p>私達の心意気をお届けします。
+              <br>地元福井産の食材にこだわり独自製法を活かした
+              <br>冷めてもおいしいお弁当をご堪能ください</p>
+          </div>
+        </div>
+      </section>
+      <section class="recommend">
+        <div class="recommend__container">
+          <header class="recommend__header">
+            <h2 class="recommend__heading">recommend</h2>
+            <p class="recommend__lead">おすすめ</p>
+          </header>
+          <ul class="recommend__list">
+            <li class="recommend__item">
+              <img src="./assets/recommended00.jpg">
+              <h4>A5級黒毛和牛のステーキ御膳</h4>
+              <div>3,730円(税込)</div>
 
-
+            </li>
+            <li class="recommend__item">
+              <img src="./assets/recommended01.jpg">
+              <h4>-豆桜-</h4>
+              <div>1,250円(税込)</div>
+              
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="category">
+        <div class="category__container">
+          <header class="category__header">
+            <h2 class="category__heading">種類から選ぶ</h2>
+          </header>
+          <div class="category__body">
+            <ul class="category__list">
+              <li class="category__item category__item--00"><a href="#">
+                <div class="category__name category__name--00">三丹プレミアム<br>弁当</div>
+                <div class="category__cover category__cover--00"></div>
+              </a></li>
+              <li class="category__item category__item--01"><a href="#">
+                <div class="category__name category__name--01">法要弁当</div>
+                <div class="category__cover category__cover--01"></div>
+              </a></li>
+              <li class="category__item category__item--02"><a href="#">
+                <div class="category__name category__name--02">オードブル</div>
+                <div class="category__cover category__cover--02"></div>
+              </a></li>
+              <li class="category__item category__item--03"><a href="#">
+                <div class="category__name category__name--03">一品料理・<br>お茶・オプション</div>
+                <div class="category__cover category__cover--03"></div>
+              </a></li>
+            </ul>
+            <footer class="category__footer">
+              <div class="category__all"><a href="#">商品一覧を見る</a></div>
+            </footer>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__container">
+          <h2 class="contact__heading">お電話・FAXでのご注文</h2>
+          <div class="contact__row">
+            <div class="contact__col">
+              <div class="contact__colInner">
+                <h4 class="contact__subHeading">[お電話]</h4>
+                <div class="contact__content">
+                  <p class="contact__number">0776-77-1060</p>
+                  <p class="contact__note">受付予約/9:00～17:00</p>
+                </div>
+              </div>
+            </div>
+            <div class="contact__col">
+              <div class="contact__colInner">
+                <h4 class="contact__subHeading">[FAX]</h4>
+                <div class="contact__content">
+                  <p class="contact__number">0776-77-1575</p>
+                  <p class="contact__note"><a href="#">注文書をダウンロード</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <h1 class="footer__siteBrand">
+          <img src="./assets/logo-invert_santan-premium.png">
+        </h1>
+        <div class="footer__content">
+          <ul class="footer__menu">
+            <li class="footer__menuItem"><a href="#">おすすめ</a></li>
+            <li class="footer__menuItem"><a href="#">種類から選ぶ</a></li>
+            <li class="footer__menuItem"><a href="#">商品一覧</a></li>
+            <li class="footer__menuItem"><a href="#">お問合せ</a></li>
+          </ul>
+          <small class="footer__copyright">Copyright &copy; SANTAN PREMIUM All Right Reserved.</small>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
