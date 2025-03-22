@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   @include container();
+  padding-right: space(5); // cart button
 
   &__siteBrand {
     width: min(36vw, 12rem); // height: 30vw, 10rem
