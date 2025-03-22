@@ -9,6 +9,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Shippori+Mincho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico">
+    <!-- deli-cart -->
+    <style type="text/css">
+      #open {
+       position: fixed;
+       text-align: center;
+       top: 0.5rem;
+       right: 5%;
+       z-index: 99;
+       width: 3rem;
+       height: 3rem;
+       padding: 0.5rem;
+       border-radius: 50%;
+       background-color: #fff;
+      }
+    </style>
+    <!-- /deli-cart -->
   </head>
   <body>
     <header class="header">
@@ -58,20 +74,28 @@
             <h2 class="recommend__heading">recommend</h2>
             <p class="recommend__lead">おすすめ</p>
           </header>
-          <ul class="recommend__list">
-            <li class="recommend__item">
-              <img src="./assets/recommended00.jpg">
-              <h4>A5級黒毛和牛のステーキ御膳</h4>
-              <div>3,730円(税込)</div>
-
-            </li>
-            <li class="recommend__item">
-              <img src="./assets/recommended01.jpg">
-              <h4>-豆桜-</h4>
-              <div>1,250円(税込)</div>
-              
-            </li>
-          </ul>
+          <div id="product" class="product product--recommend">
+            <ul class="product__list">
+              <li class="product__item" v-for="product, i in products">
+                <img :src="product.image">
+                <h4 v-html="product.name"></h4>
+                <div v-html="product.price"></div>
+                <!-- add to cart -->
+                <div class="product__item_detail item_detail_info">
+                  <input type="hidden" :value="product.id" id="item_detail_item_id">
+                  <p class="item_detail_number">
+                    <button class="item-num-decrease">-</button>
+                    <input class="item-num" size="3" type="type" min="1" :value="product.value" :data-index="i" readonly>
+                    <button class="item-num-increase">+</button>
+                  </p>
+                  <div class="info_group" id="item_detail_cart">
+                    <a class="product__add add" href="javascript:void(0)" >購入する</a>
+                  </div>
+                </div>
+                <!-- //add to cart -->
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="category">
@@ -146,5 +170,21 @@
         </div>
       </div>
     </footer>
+    <!-- deli-cart -->
+    <div id="open">
+      <img src="/img/cart.png" alt="カートを見る">
+    </div>
+    <script type="text/javascript" src="//www.deli-cart.jp/public/external/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="//www.deli-cart.jp/public/external/js/jquery.insertVariations.js"></script>
+    <script type="text/javascript" src="//www.deli-cart.jp/public/external/jquery.externalObentoCart.js"></script>
+    <script type="text/javascript" src="//www.deli-cart.jp/public/external/checkUserAgent.js"></script>
+    <!-- /deli-cart -->
+    <script type="module">
+      import init from './js/_init.js';
+
+      const catArr = ['recommended'];
+      init(catArr);
+
+    </script>
   </body>
 </html>

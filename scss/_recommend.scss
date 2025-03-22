@@ -69,21 +69,4 @@
       text-align: left;
     }
   }
-
-  &__list {
-    @include listUnstyled();
-    @include row(flex-start, flex-start);
-    margin: 0;
-  }
-
-  &__item {
-    @include col(4);
-    margin: 0 0 space(4);
-
-    h4 {
-      font-family: $fontFamilyBase;
-      font-size: 1rem;
-      letter-spacing: 0;
-    }
-  }
 }
