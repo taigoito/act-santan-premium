@@ -14,8 +14,12 @@
 
   &__list {
     @include listUnstyled();
-    @include row(flex-start, flex-start);
+    @include row(center, flex-start);
     margin: 0;
+
+    @media (min-width: breakpoint("lg")) {
+      justify-content: flex-start;
+    }
   }
 
   &__item {
@@ -69,10 +73,12 @@
     border-radius: space(1);
     @include background("lightest");
     text-align: center;
-    transition: opacity 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
 
     &:hover {
-      opacity: 0.7;
+      border-color: themeColor("primary");
+      background-color: themeColor("primary");
+      color: themeColor("lightest");
     }
   }
 }

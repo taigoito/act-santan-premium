@@ -53,5 +53,10 @@
   &__note {
     margin: 0;
     font-size: map-get($fontSizes, "xs");
+
+    a:hover {
+      color: themeColor("primary");
+      text-decoration: underline;
+    }
   }
 }

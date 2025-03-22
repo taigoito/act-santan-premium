@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>三丹プレミアム</title>
+    <title>オードブル | 三丹プレミアム</title>
+    <meta name="description" content="誕生パーティ、同好会、忘年会に新年会、その他ご家族・ご親戚など、お集りの場で、皆様で楽しんでいただける料理をご用意いたします。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Shippori+Mincho&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../favicon.ico">
     <!-- deli-cart -->
     <style type="text/css">
       #open {
@@ -29,7 +30,7 @@
   <body>
     <header id="header" class="header">
       <h1 class="header__siteBrand">
-        <img src="./assets/logo_santan-premium.png">
+        <img src="../assets/logo_santan-premium.png">
       </h1>
       <nav id="gNav" class="gNav">
         <ul class="gNav__menu">
@@ -41,62 +42,32 @@
       </nav>
     </header>
     <main class="main">
-      <header id="mainVisual" class="mainVisual">
-        <h2 class="mainVisual__title">
-          <img src="./assets/title_santan-premium.png">
-        </h2>
-        <figure class="mainVisual__image mainVisual__image--00">
-          <img src="./assets/mainImage00.jpg">
-        </figure>
-        <figure class="mainVisual__image mainVisual__image--01">
-          <img src="./assets/mainImage01.jpg">
-        </figure>
-        <figure class="mainVisual__image mainVisual__image--02">
-          <img src="./assets/mainImage02.jpg">
-        </figure>
+      <header id="mainHeader" class="main__header">
+        <h2 class="main__title">オードブル</h2>
+        <p class="main__description">誕生パーティ、同好会、忘年会に新年会、その他ご家族・ご親戚など、
+          <br>お集りの場で、皆様で楽しんでいただける料理をご用意いたします。</p>
       </header>
-      <section id="about" class="about">
-        <div class="about__container">
-          <header class="about__header">
-            <h2 class="about__heading">about</h2>
-            <p class="about__lead">三丹<br>プレミアムの<br>こだわり</p>
-          </header>
-          <div class="about__content">
-            <p>私達の心意気をお届けします。
-              <br>地元福井産の食材にこだわり独自製法を活かした
-              <br>冷めてもおいしいお弁当をご堪能ください</p>
-          </div>
-        </div>
-      </section>
-      <section id="recommend" class="recommend">
-        <div class="recommend__container">
-          <header class="recommend__header">
-            <h2 class="recommend__heading">recommend</h2>
-            <p class="recommend__lead">おすすめ</p>
-          </header>
-          <div id="product" class="product product--recommend">
-            <ul class="product__list">
-              <li class="product__item" v-for="product, i in products">
-                <img :src="`./assets/recommended0${i}.jpg`">
-                <h4 v-html="product.name"></h4>
-                <div v-html="product.price"></div>
-                <!-- add to cart -->
-                <div class="product__item_detail item_detail_info">
-                  <input type="hidden" :value="product.id" id="item_detail_item_id">
-                  <p class="item_detail_number">
-                    <button class="item-num-decrease">-</button>
-                    <input class="item-num" size="3" type="type" min="1" :value="product.value" :data-index="i" readonly>
-                    <button class="item-num-increase">+</button>
-                  </p>
-                  <div class="info_group" id="item_detail_cart">
-                    <a class="product__add add" href="javascript:void(0)" >購入する</a>
-                  </div>
-                </div>
-                <!-- //add to cart -->
-              </li>
-            </ul>
-          </div>
-        </div>
+      <section id="product" class="product">
+        <ul class="product__list">
+          <li class="product__item" v-for="product, i in products">
+            <img :src="product.image">
+            <h4 v-html="product.name"></h4>
+            <div v-html="product.price"></div>
+            <!-- add to cart -->
+            <div class="product__item_detail item_detail_info">
+              <input type="hidden" :value="product.id" id="item_detail_item_id">
+              <p class="item_detail_number">
+                <button class="item-num-decrease">-</button>
+                <input class="item-num" size="3" type="type" min="1" :value="product.value" :data-index="i" readonly>
+                <button class="item-num-increase">+</button>
+              </p>
+              <div class="info_group" id="item_detail_cart">
+                <a class="product__add add" href="javascript:void(0)" >購入する</a>
+              </div>
+            </div>
+            <!-- //add to cart -->
+          </li>
+        </ul>
       </section>
       <section id="category" class="category">
         <div class="category__container">
@@ -157,7 +128,7 @@
     <footer id="footer" class="footer">
       <div class="footer__container">
         <h1 class="footer__siteBrand">
-          <img src="./assets/logo-invert_santan-premium.png">
+          <img src="../assets/logo-invert_santan-premium.png">
         </h1>
         <div class="footer__content">
           <ul class="footer__menu">
@@ -180,9 +151,9 @@
     <script type="text/javascript" src="//www.deli-cart.jp/public/external/checkUserAgent.js"></script>
     <!-- /deli-cart -->
     <script type="module">
-      import init from './js/_init.js';
+      import init from '../js/_init.js';
 
-      const catArr = ['recommended'];
+      const catArr = ['assorted-dishes', 'others'];
       init(catArr);
 
     </script>

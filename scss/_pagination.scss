@@ -1,0 +1,39 @@
+/**
+ * Pagination
+ */
+
+.pagination {
+  @include listUnstyled();
+  @include row(center, center);
+  gap: space();
+  width: 100%;
+  padding: space() 0;
+  border-top: 1px solid themeColor("lighter");
+
+  &__item {
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+
+    span {
+      display: block;
+      border: 1px solid themeColor("light");
+      color: themeColor("light");
+    }
+
+    a {
+      display: block;
+      border: 1px solid $bodyColor;
+      color: $bodyColor;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        border-color: themeColor("primary");
+        background-color: themeColor("primary");
+        color: themeColor("lightest");
+      }
+    }
+  }
+}
