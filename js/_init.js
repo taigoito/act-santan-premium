@@ -10,7 +10,7 @@ import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.
 
 export default function init(catArr) {
   // DrawerMenu
-  const siteBrand = document.querySelector('.header__siteBrand');
+  const siteBrand = document.querySelector('.footer__siteBrand');
   const primaryMenu = document.querySelector('.gNav__menu');
   new DrawerMenu({
     darkMode: true,

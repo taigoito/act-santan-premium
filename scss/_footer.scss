@@ -19,6 +19,14 @@
     flex: 0 0 12rem;
     width: min(36vw, 12rem); // height: 30vw, 10rem
     margin: space(3) 0;
+
+    img {
+      transition: opacity 0.25s ease-in-out;
+    }
+
+    a:hover img {
+      opacity: 0.7;
+    } 
   }
 
   &__content {

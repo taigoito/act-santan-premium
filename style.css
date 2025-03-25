@@ -146,6 +146,12 @@ button, input, select, textarea {
 .header__siteBrand {
   width: min(36vw, 12rem);
 }
+.header__siteBrand img {
+  transition: opacity 0.25s ease-in-out;
+}
+.header__siteBrand a:hover img {
+  opacity: 0.7;
+}
 
 /**
  * G Nav
@@ -826,6 +832,10 @@ button, input, select, textarea {
   margin: 0;
   font-size: 2rem;
 }
+.contact__number a:hover {
+  color: #9e1f50;
+  text-decoration: underline;
+}
 .contact__note {
   margin: 0;
   font-size: 0.75rem;
@@ -867,6 +877,12 @@ button, input, select, textarea {
   flex: 0 0 12rem;
   width: min(36vw, 12rem);
   margin: 1.5rem 0;
+}
+.footer__siteBrand img {
+  transition: opacity 0.25s ease-in-out;
+}
+.footer__siteBrand a:hover img {
+  opacity: 0.7;
 }
 .footer__content {
   flex: 0 0 auto;
@@ -1029,7 +1045,7 @@ button, input, select, textarea {
 }
 .drawerMenu__item--siteBrand img {
   width: auto;
-  height: 6rem;
+  height: 7.5rem;
 }
 .drawerMenu__item--social {
   width: 3rem;
@@ -1052,7 +1068,7 @@ button, input, select, textarea {
   fill: #f7f7f7;
 }
 .drawerMenu--dark .drawerMenu__item img {
-  filter: invert(1) grayscale(1) brightness(4);
+  filter: none;
 }
 
 .drawerMenuOverlay {

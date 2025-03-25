@@ -48,6 +48,11 @@
   &__number {
     margin: 0;
     font-size: map-get($fontSizes, "xxl");
+
+    a:hover {
+      color: themeColor("primary");
+      text-decoration: underline;
+    }
   }
 
   &__note {
