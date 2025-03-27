@@ -787,8 +787,8 @@ button, input, select, textarea {
 .contact__row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: stretch;
 }
 .contact__col {
   flex-grow: 3;
@@ -806,6 +806,7 @@ button, input, select, textarea {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
   padding: 1.5rem;
   border-radius: 0.75rem;
   background-color: #ffffff;
@@ -816,12 +817,16 @@ button, input, select, textarea {
 }
 .contact__subHeading {
   flex: 0 0 auto;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 4.5rem;
   margin: 0;
   font-family: "Shippori Mincho", serif;
   font-weight: 700;
   font-size: 0.75rem;
+  text-align: center;
+}
+.contact__subHeading--wide {
+  width: 10.5rem;
+  margin-bottom: 0.75rem;
 }
 .contact__content {
   flex: 0 0 auto;
