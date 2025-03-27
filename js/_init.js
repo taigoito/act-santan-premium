@@ -4,11 +4,15 @@
  * Location: Fukui, Japan
  */
 
+import BackToTop from './_backToTop.js';
 import DrawerMenu from './_drawerMenu.js';
 import EvilIcons from './_evilIcons.js';
-import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.esm-browser.js';
+import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.0.0/vue.esm-browser.prod.js';
 
 export default function init(catArr) {
+  // BackToTop
+  new BackToTop();
+
   // DrawerMenu
   const siteBrand = document.querySelector('.footer__siteBrand');
   const primaryMenu = document.querySelector('.gNav__menu');

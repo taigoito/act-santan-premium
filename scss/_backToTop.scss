@@ -1,0 +1,42 @@
+/**
+ * Component - Back To Top
+ */
+
+$backBtnBg:          themeColor("primary") !default;
+$backBtnColor:       colorYiq(themeColor("primary")) !default;
+$backBtnHoverBg:     themeColor("primaryLight") !default;
+$backBtnHoverColor:  colorYiq(themeColor("primaryLight")) !default;
+$backBtnPad:         space() !default;
+$backBtnHeight:      3rem !default;
+
+.backToTop {
+  position: fixed;
+  right: 5%; // Customize
+  bottom: 0.5em; // Customize
+  z-index: 1000;
+  display: block;
+  width: $backBtnPad * 2 + $backBtnHeight;
+  height: $backBtnPad * 2 + $backBtnHeight;
+  padding: 0; // Reset
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  outline: 0;
+  cursor: pointer;
+
+  .icon {
+    position: absolute;
+    right: $backBtnPad;
+    bottom: $backBtnPad;
+    width: $backBtnHeight;
+    height: $backBtnHeight;
+    border-radius: 50%;
+    background-color: $backBtnBg;
+    color: $backBtnColor;
+  }
+
+  &:hover .icon {
+    background-color: $backBtnHoverBg;
+    color: $backBtnHoverColor;
+  }
+}
